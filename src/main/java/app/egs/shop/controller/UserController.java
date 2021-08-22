@@ -102,7 +102,7 @@ public class UserController {
     // ==============================================
     @PostMapping("/admin/create/")
     @ResponseStatus(HttpStatus.CREATED)
-    public void createUserByAdmin(@Valid @RequestBody UserController.UserRequest request) {
+    public void createUserByAdmin(@Valid @RequestBody UserRequest request) {
         userService.createUser(
             request.getUsername(),
             request.getPassword(),
@@ -204,7 +204,7 @@ public class UserController {
         @Size(max = 50, message = "email must be lower that 50 character.")
         @Email
         private String email;
-        @Size(max = 50, message = "email must be lower that 50 character.")
+        @Size(max = 50, message = "status must be lower that 50 character.")
         private String status;
         @Size(max = 50, message = "authorities must be lower that 50 character.")
         private Set<String> authorities;
