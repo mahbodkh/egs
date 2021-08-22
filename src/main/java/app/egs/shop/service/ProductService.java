@@ -3,7 +3,6 @@ package app.egs.shop.service;
 import app.egs.shop.domain.ProductEntity;
 import app.egs.shop.exception.NotFoundException;
 import app.egs.shop.repository.ProductRepository;
-import app.egs.shop.repository.SearchRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -113,6 +112,5 @@ public class ProductService {
         return pattern.matcher(strNum).matches();
     }
 
-    private final SearchRepository searchRepository;
     private final ProductRepository productRepository;
 }
